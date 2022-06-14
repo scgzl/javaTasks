@@ -4,7 +4,7 @@ public class fedReserve {
 
     public static void main(String[] args) {
 
-        String x = "asda-9asdsa67asd";
+        String x = "asda-9asdsa67asd6";
 
         // get the sum of numbers
 

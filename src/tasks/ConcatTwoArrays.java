@@ -8,8 +8,6 @@ public class ConcatTwoArrays {
         int[] arr1 = {12, 24, 654, 66, 33};
         int[] arr2 = {23, 45, 77, 9, 88};
 
-
-
         System.out.println(Arrays.toString(concatTwoArrays(arr1, arr2)));
     }
 
@@ -21,14 +19,11 @@ public class ConcatTwoArrays {
             result[i] = each;
             i++;
         }
-
         for (int each : arr2) {
             result[i] = each;
             i++;
         }
-
         return result;
-
 
     }
 }

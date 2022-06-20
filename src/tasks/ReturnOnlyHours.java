@@ -9,7 +9,6 @@ public class ReturnOnlyHours {
         //11:00, 9:0, 15:00
         String str = "24:00";
 
-
         System.out.println(returnHours(str));
 
     }

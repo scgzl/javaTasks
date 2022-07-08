@@ -11,7 +11,7 @@ public class MoveZerosToEndArraylist {
         Integer[]ab = {123,2,0,23,0,11,7,98};
         List<Integer> list = new ArrayList<Integer>(Arrays.asList(ab));
 
-
+        System.out.println("list = " + list);
 
     }
 

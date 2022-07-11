@@ -24,23 +24,15 @@ public class ValidParanthesis {
     }
 
     public static boolean isValid(String s) {
-        if (s.length() % 2 != 0) return false;
         Stack<Character> stack = new Stack<>();
-
-        for (char c : s.toCharArray()) {
-            if (c == '(' || c == '{' || c == '['){
-                stack.push(c);
-            } else if (c==')' && !stack.isEmpty() && stack.peek()=='(') {
-                stack.pop();
-            }else if (c=='}' && !stack.isEmpty() && stack.peek()=='(') {
-                stack.pop();
-            }else if (c==']' && !stack.isEmpty() && stack.peek()=='[') {
-                stack.pop();
-            }
-
-
+        for(int i = 0; i < s.length(); i++) {
+            char a = s.charAt(i);
+            if(a == '(' || a == '[' || a == '{') stack.push(a);
+            else if(stack.empty()) return false;
+            else if(a == ')' && stack.pop() != '(') return false;
+            else if(a == ']' && stack.pop() != '[') return false;
+            else if(a == '}' && stack.pop() != '{') return false;
         }
-
-        return stack.isEmpty();
+        return stack.empty();
     }
 }
